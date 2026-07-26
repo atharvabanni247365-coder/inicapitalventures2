@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-black: #000000;
+  --color-accent-gold: #C5A880;
+  --color-text-anthracite: #1A1A1A;
+  --color-bg-alabaster: #F8F8F8;
+  --color-accent-platinum: #D3D3D3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-alabaster);
+  color: var(--color-text-anthracite);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(211, 211, 211, 0.4);
+  }
+
+  .glass-card-dark {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(197, 168, 128, 0.25);
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #C5A880 0%, #E8D3B5 50%, #B0936C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gold-border-glow {
+    box-shadow: 0 0 20px rgba(197, 168, 128, 0.25);
+  }
+}
