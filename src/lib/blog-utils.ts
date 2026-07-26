@@ -80,7 +80,7 @@ Modern web applications are moving away from noisy minimalism toward intentional
 
 export async function getAllPosts(): Promise<BlogPost[]> {
   try {
-    if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'dummy-project-id') {
+    if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'dummy-project-id' && process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'dummy_project_id') {
       const sanityPosts = await client.fetch(postsQuery);
       if (sanityPosts && sanityPosts.length > 0) {
         return sanityPosts.map((p: any) => ({
@@ -109,7 +109,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
   try {
-    if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'dummy_project_id') {
+    if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'dummy-project-id' && process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'dummy_project_id') {
       const p = await client.fetch(postBySlugQuery, { slug });
       if (p) {
         return {
