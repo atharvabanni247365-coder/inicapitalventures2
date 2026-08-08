@@ -13,6 +13,7 @@
   "dependencies": {
     "@portabletext/react": "^3.0.0",
     "@react-email/components": "^1.0.12",
+    "@sanity/icons": "^2.11.3",
     "@sanity/image-url": "^2.1.1",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
